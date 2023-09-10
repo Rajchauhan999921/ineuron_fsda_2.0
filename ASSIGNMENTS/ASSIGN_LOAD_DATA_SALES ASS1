@@ -1,0 +1,37 @@
+use database RAJ ;
+create or replace table SALES
+(order_id string,
+order_date varchar(39),
+ship_date varchar(50),
+ship_mode varchar(50),
+customer_name varchar(50),
+segment varchar(50),
+state varchar(50),
+country varchar(50),
+market varchar (50),
+region varchar(50),
+product_id varchar(50),
+category varchar(50),
+sub_category varchar(50),
+product_name string,
+sales varchar(50),
+quantity int,
+discount float,
+profit float,
+shipping_cost float,
+order_priority varchar(50),
+year int
+);
+select*from sales;
+describe table sales;
+
+
+  select  distinct discount from sales ;
+  select *,
+  case
+  when discount > 0 then 'True'
+  else 'false'
+  end as discount_value
+  from sales ;
+
+
